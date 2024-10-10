@@ -588,3 +588,160 @@
       padding: 60px 0px;
     }
   }
+  .wrapper .content .left .sliderNavigation {
+    width: fit-content;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+  }
+  @media screen and (max-width: 799px) {
+    .wrapper .content .left .sliderNavigation {
+      bottom: 20px;
+    }
+  }
+  .wrapper .content .left .sliderNavigation .swiper-pagination {
+    position: initial;
+    margin: 0 20px;
+    z-index: 2;
+  }
+  .wrapper .content .left .sliderNavigation .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    margin: 0 10px;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    opacity: 1;
+  }
+  .wrapper .content .left .sliderNavigation .swiper-pagination .swiper-pagination-bullet-active {
+    width: 20px;
+    background-color: #fd6561;
+    border: 1px solid #fd6561;
+  }
+  .wrapper .content .left .sliderNavigation .swiper-button-next,
+  .wrapper .content .left .sliderNavigation .swiper-button-prev {
+    margin: 0;
+    top: initial;
+    left: initial;
+    right: initial;
+    position: initial;
+    background-repeat: repeat;
+    background-position: center;
+    transition: all 0.2s ease;
+  }
+  @media screen and (max-width: 799px) {
+    .wrapper .content .left .sliderNavigation .swiper-button-next,
+    .wrapper .content .left .sliderNavigation .swiper-button-prev {
+      display: none;
+    }
+  }
+  .wrapper .content .left .sliderNavigation .swiper-button-next {
+    background-image: url(../assets/arrow-next.svg)
+  }
+  .wrapper .content .left .sliderNavigation .swiper-button-next:hover {
+    transform: translateX(5px);
+  }
+  .wrapper .content .left .sliderNavigation .swiper-button-prev {
+    background-image: url(../assets/arrow-prev.svg);
+  }
+  .wrapper .content .left .sliderNavigation .swiper-button-prev:hover {
+    transform: translateX(-5px);
+  }
+  .wrapper .content .right {
+    background-color: white;
+    padding: 0px 60px 40px 15%;
+  }
+  @media screen and (max-width: 799px) {
+    .wrapper .content .right {
+      height: auto;
+      padding: 0px 5vw;
+      padding-bottom: 100px;
+    }
+  }
+  .wrapper .content .right .subtitle {
+    color: #5a5a5a;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .wrapper .content .right .rightContent {
+    max-width: 600px;
+    margin-top: 220px;
+  }
+  @media screen and (max-width: 799px) {
+    .wrapper .content .right .rightContent {
+      max-width: 400px;
+      margin: auto;
+      margin-top: 60px;
+    }
+  }
+  .wrapper .content .right .rightContent .model {
+    margin-bottom: 40px;
+  }
+  .wrapper .content .right .rightContent .model .modelTitle {
+    color: #fd6561;
+    font-weight: 800;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 799px) {
+    .wrapper .content .right .rightContent .model .modelTitle {
+      font-size: 28px;
+    }
+  }
+  .wrapper .content .right .rightContent .model .modelDesc {
+    font-size: 18px;
+    color: #5a5a5a;
+  }
+  .wrapper .content .right .rightContent .price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    transition: all 0.4s ease;
+  }
+  .wrapper .content .right .rightContent .price .priceFinal {
+    font-weight: bold;
+    font-size: 28px;
+    color: #5a5a5a;
+    margin-right: 10px;
+    transition: all 0.4s ease;
+  }
+  .wrapper .content .right .rightContent .price .priceFinal.anime {
+    animation: price 0.4s ease;
+  }
+  @keyframes price {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @media screen and (max-width: 799px) {
+    .wrapper .content .right .rightContent .price .priceFinal {
+      font-size: 24px;
+    }
+  }
+  .wrapper .content .right .rightContent .price .priceOriginal {
+    text-decoration: line-through;
+    color: #bdbdbd;
+    transition: all 0.4s ease;
+  }
+  .wrapper .content .right .rightContent .specs {
+    display: flex;
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: 799px) {
+    .wrapper .content .right .rightContent .specs {
+      margin-bottom: 60px;
+    }
+  }
