@@ -2,6 +2,32 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css");
 @import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:200,300,400,500,600,700,800,900|Barlow:200,300,400,500,600,700,800,900&display=swap");
 
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+  }
+  *:focus {
+    outline: 0;
+  }
+  * input::-webkit-outer-spin-button,
+  * input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  body {
+    background-color: #e1e1e1;
+    font-family: "Barlow", sans-serif;
+    font-weight: normal;
+    transition: all 0.4s ease;
+  }
+
 .about{
     position: fixed;
     z-index: 10;
@@ -31,7 +57,7 @@
     width: 40px;
     height: 40px;
     z-index: 9;
-    background-image: url(../assets/logo_white.svg);
+    background-image: url(../assets/294668_nike_icon.png);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: 10px 7px;
