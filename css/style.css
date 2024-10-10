@@ -102,3 +102,128 @@
   .about .social.linkedin .icon {
     background-image: url(../assets/linkedin.svg);
   }
+  
+.about:hover {
+    width: 105px;
+    height: 105px;
+    transition: all 0.6s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+  }
+  .about:hover .logo {
+    opacity: 1;
+    transition: all 0.6s ease;
+  }
+  .about:hover .social {
+    opacity: 1;
+  }
+  .about:hover .social .icon {
+    opacity: 0.9;
+  }
+  .about:hover .social:hover {
+    background-size: 28px;
+  }
+  .about:hover .social:hover .icon {
+    background-size: 65%;
+    opacity: 1;
+  }
+  .about:hover .social.portfolio {
+    right: 0;
+    bottom: calc(100% - 40px);
+    transition: all 0.3s 0s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+  }
+  .about:hover .social.portfolio .icon:hover {
+    background-color: #698fb7;
+  }
+  .about:hover .social.dribbble {
+    bottom: 45%;
+    right: 45%;
+    transition: all 0.3s 0.15s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+  }
+  .about:hover .social.dribbble .icon:hover {
+    background-color: #ea4c89;
+  }
+  .about:hover .social.linkedin {
+    bottom: 0;
+    right: calc(100% - 40px);
+    transition: all 0.3s 0.25s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+  }
+  .about:hover .social.linkedin .icon:hover {
+    background-color: #0077b5;
+  }
+  
+  
+  @media screen and (max-width: 799px) {
+    body {
+      background-color: white;
+    }
+  }
+  
+  .logo {
+    position: fixed;
+    z-index: 5;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    backdrop-filter: blur(5px);
+  }
+  .logo img {
+    width: 55%;
+    height: 55%;
+    transform: translateY(-1px);
+    opacity: 0.8;
+  }
+  @media screen and (max-width: 799px) {
+    .logo {
+      display: none;
+    }
+  }
+  
+  .wrapper {
+    width: 100%;
+    font-family: "Barlow", sans-serif;
+    user-select: none;
+    letter-spacing: 0.8px;
+    margin: 0 auto;
+  }
+  .wrapper .btnContainer {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 3;
+  }
+  @media screen and (max-width: 799px) {
+    .wrapper .btnContainer.fixedBtn {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding: 20px 5%;
+    }
+    .wrapper .btnContainer.fixedBtn:before {
+      content: "";
+      position: fixed;
+      width: 100vw;
+      height: 110px;
+      background: linear-gradient(0deg, white 60%, transparent 90%);
+      z-index: -2;
+      display: none;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  @media screen and (max-width: 799px) and (max-width: 799px) {
+    .wrapper .btnContainer.fixedBtn:before {
+      display: block;
+    }
+  }
+  @media screen and (max-width: 799px) {
+    .wrapper .btnContainer.fixedBtn .btn {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
