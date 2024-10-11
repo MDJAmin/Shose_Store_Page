@@ -51,7 +51,7 @@ window.addEventListener("load", event => {
             dropItem = document.querySelectorAll('.dropItem'),
             maxQuantity = 5,
             newMaxQuantity = maxQuantity;
-            
+
             
             // - - - Events - - - ///
 
@@ -70,7 +70,78 @@ window.addEventListener("load", event => {
 
         window.addEventListener("resize", resize);
 
+// - - - Functionality - - - //
 
+        // Fixed Nav 
+
+        window.onscroll = function () {
+            if (window.pageYOffset >= 60) {
+                nav.classList.add("fixed");
+            } else {
+                nav.classList.remove("fixed");
+            }
+        };
+
+        // Change button position on mobile
+
+        function resize() {
+            //Button
+            if (window.innerHeight > wrapper.offsetHeight) {
+                btnContainer.classList.remove('fixedBtn');
+            } else {
+                btnContainer.classList.add('fixedBtn');
+            }
+            parallax();
+        }
+
+        // Parallax
+
+        function parallax() {
+            if (window.innerWidth > 800) {
+                var scene = document.querySelectorAll('.scene');
+                scene.forEach(pic => {
+                    var parallax = new Parallax(pic);
+                })
+            }
+        }
+
+        // Calculate the Discount
+
+        function getDisccount() {
+            priceOriginal.innerText = product.value + "€";
+            discount = product.value - (product.value * (30 / 100));
+            priceFinal.innerText = discount + "€";
+        }
+
+        // Calculate the the Prices with discounts
+
+        function getPrice() {
+
+            priceFinal.innerText = discount * inputQuantity.value + "€";
+            priceOriginal.innerText = product.value * inputQuantity.value + "€";
+
+            setTimeout(() => {
+                priceFinal.classList.remove('anime');
+            }, 400);
+        }
+
+        // Update the prices with the quantity counter
+
+        function plusQuantity() {
+            if (inputQuantity.value < maxQuantity) {
+                inputQuantity.value == inputQuantity.value++;
+                priceFinal.classList.add('anime');
+            }
+            getPrice();
+        }
+
+        function minusQuantity() {
+            if (inputQuantity.value > 1) {
+                inputQuantity.value == inputQuantity.value--;
+                priceFinal.classList.add('anime');
+            }
+            getPrice();
+        }
 
     }
 
