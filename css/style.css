@@ -168,6 +168,9 @@ body {
   border-radius: 100%;
   backdrop-filter: blur(5px);
 }
+.logo:hover{
+  background-color: #fd6561;
+}
 .logo img {
   width: 55%;
   height: 55%;
@@ -545,8 +548,7 @@ body {
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  min-height: 742px;
-  height: 100%;
+
   transition: all 0.4s ease;
 }
 @media screen and (max-width: 1023px) {
@@ -677,7 +679,7 @@ body {
 }
 .wrapper .content .right .rightContent {
   max-width: 600px;
-  margin-top: 220px;
+  margin-top: 180px;
 }
 @media screen and (max-width: 799px) {
   .wrapper .content .right .rightContent {

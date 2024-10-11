@@ -1,4 +1,5 @@
 window.addEventListener("load", (event) => {
+    
   // - - - Variable - - - //
 
   function productHeading() {
