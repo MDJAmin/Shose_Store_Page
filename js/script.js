@@ -51,6 +51,26 @@ window.addEventListener("load", event => {
             dropItem = document.querySelectorAll('.dropItem'),
             maxQuantity = 5,
             newMaxQuantity = maxQuantity;
+            
+            
+            // - - - Events - - - ///
+
+
+        btnAdd.addEventListener('click', addItem);
+        plus.addEventListener("click", plusQuantity);
+        minus.addEventListener("click", minusQuantity);
+        arrowDrop.addEventListener("click", openDrop);
+        shoppingIcon.addEventListener("click", openShoppingCart);
+
+        emptyCart.addEventListener("click", cleanCart);
+
+        dropItem.forEach(function (el) {
+            el.addEventListener("click", getSize);
+        })
+
+        window.addEventListener("resize", resize);
+
+
 
     }
 
