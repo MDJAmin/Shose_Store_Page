@@ -1,3 +1,5 @@
+// Enjoy!! 🍓
+
 window.addEventListener("load", (event) => {
   // - - - Variable - - - //
 
