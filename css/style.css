@@ -168,7 +168,7 @@ body {
   border-radius: 100%;
   backdrop-filter: blur(5px);
 }
-.logo:hover{
+.logo:hover {
   background-color: #fd6561;
 }
 .logo img {
