@@ -7,26 +7,15 @@ window.addEventListener("load", (event) => {
     const product = {
       value: 125,
       images: [
-        {
-          img: "../assets/img01.png",
-        },
-        {
-          img: "../assets/img02.png",
-        },
-        {
-          img: "../assets/img03.png",
-        },
-        {
-          img: "../assets/img04.png",
-        },
-        {
-          img: "../assets/img05.png",
-        },
-        {
-          img: "../assets/img06.png",
-        },
+        { img: "assets/img01.png" },
+        { img: "assets/img02.png" },
+        { img: "assets/img03.png" },
+        { img: "assets/img04.png" },
+        { img: "assets/img05.png" },
+        { img: "assets/img06.png" },
       ],
     };
+    
 
     const btnAdd = document.querySelector(".btn.add"),
       btnContainer = document.querySelector(".btnContainer"),
